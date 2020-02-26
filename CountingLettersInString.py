@@ -56,11 +56,29 @@ except KeyError:
 
 #accepting input from user
 try:
-    test_str = input("please enter the string you want the character occurrences counted")
+    #initializing a dictionary to store the key value pair
     test_str_dict = {}
-    for character in test_str.lower():
-        test_str_dict.setdefault(character,0)
-        test_str_dict[character] = test_str_dict[character] + 1
-    print(test_str_dict)
+
+    #while loop to keep accepting input from user
+    while True:
+        test_str = input("****************please enter the string you want the character occurrences counted****************\n")
+
+        #if condition to evaluate whether to continue or break out of the program
+        if test_str == '':
+            #variable to store the customer repsonse
+            response = input("****************Do you want to continue?? Y or N****************\n")
+
+            #if condition to evaluate if he want to conture
+            if response == 'Y':
+                continue
+            else:
+                break
+            break
+        else:
+            for character in test_str.lower():
+                test_str_dict.setdefault(character,0)
+                test_str_dict[character] = test_str_dict[character] + 1
+            print(test_str_dict)
+
 except KeyError:
     print('The key doesnt exist')
