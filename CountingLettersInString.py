@@ -53,10 +53,12 @@ except KeyError:
     print('The key doesnt exist')
 
 #now using all the above operators to count the occurence of letters in string
-test_str = 'hi there!'
-test_str_dict={}
+
+#accepting input from user
 try:
-    for character in test_str:
+    test_str = input("please enter the string you want the character occurrences counted")
+    test_str_dict = {}
+    for character in test_str.lower():
         test_str_dict.setdefault(character,0)
         test_str_dict[character] = test_str_dict[character] + 1
     print(test_str_dict)
