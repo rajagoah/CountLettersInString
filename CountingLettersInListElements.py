@@ -11,6 +11,6 @@ for i in range(len(df)):
     for j in names[0]:
         dict.setdefault(j, 0)
         dict[j] = dict[j] + 1
-    print(dict)
+print(dict)
 
 
