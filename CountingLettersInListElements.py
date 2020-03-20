@@ -12,5 +12,7 @@ for i in range(len(df)):
         dict.setdefault(j, 0)
         dict[j] = dict[j] + 1
     print(dict)
+    #resetting the dictionary to an empty dictionary
+    dict.clear()
 
 
